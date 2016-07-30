@@ -2,7 +2,6 @@
 layout: default
 title: Getting Started
 permalink: /getting-started/
-order: 1
 ---
 
 It is recommended that you use Stalfos as a base and not as a framework. Therefore the most straightforward way to get it running would be to:
