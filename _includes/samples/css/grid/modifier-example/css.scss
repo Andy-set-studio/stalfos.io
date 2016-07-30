@@ -1,0 +1,18 @@
+.grid-example {
+
+	@extend %grid;
+
+	&__item {
+
+		// Use the universal sizing system to size our items
+		@extend %palm--one-whole;
+		@extend %lap--one-third;
+		@extend %desk--one-third;
+	}
+
+	// Add the modifier
+	&--center {
+
+		@extend %grid--center;
+	}
+}

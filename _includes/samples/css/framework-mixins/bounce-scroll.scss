@@ -1,0 +1,5 @@
+.your-element {
+	position: relative;
+
+	@include bounce-scroll();
+}

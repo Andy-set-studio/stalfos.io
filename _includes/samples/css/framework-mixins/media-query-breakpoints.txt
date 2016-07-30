@@ -1,0 +1,20 @@
+// Up to large phones
+"palm" = $breakpoint--palm
+
+// Large phones & small tablets
+"portable" = $breakpoint--portable
+
+// Large phones & small tablets upwards
+"portable-and-up" = $breakpoint--portable-and-up
+
+// Large tablets & small desktops
+"lap" = $breakpoint--lap
+
+// Large tablets & small desktops upwards
+"lap-and-up" = $breakpoint--lap-and-up
+
+// Desktop browsers
+"desk" = $breakpoint--desk
+
+// Large desktop browsers
+"desk-wide" = $breakpoint--desk--wide

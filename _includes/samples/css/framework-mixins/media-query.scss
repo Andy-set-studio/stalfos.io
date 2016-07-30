@@ -1,0 +1,18 @@
+.your-element {
+	background: red;
+
+	// Large phones and small tablets
+	@include media-query("portable") {
+		background: yellow;
+	} 
+
+	// Large tablets and up
+	@include media-query("lap-and-up") {
+		background: blue;
+	}
+
+	// Large desktop screens
+	@include media-query("desk-wide") {
+		background: black;
+	}
+}

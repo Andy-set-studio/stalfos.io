@@ -1,0 +1,16 @@
+<header class="site-head" role="banner">
+	<h1 class="site-head__heading">Page heading goes here</h1>
+
+	<!-- NAVIGATION STARTS -->
+
+	<nav class="navigation">
+
+		&lbrace;% for item in navigation %&rbrace;
+			<a class="navigation__item" href="&lbrace;&lbrace; item.url &rbrace;&rbrace;">&lbrace;&lbrace; item.title &rbrace;&rbrace;</a>
+		&lbrace;% endfor %&rbrace;
+
+	</nav>
+
+	<!-- NAVIGATION ENDS -->
+
+</header>

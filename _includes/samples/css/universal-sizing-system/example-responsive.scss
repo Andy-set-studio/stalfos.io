@@ -1,0 +1,7 @@
+.example-component {
+
+    @extend %palm--one-whole; // 100% at mobile
+    @extend %lap--two-thirds; // 66.666% at large tablets / small desktops
+    @extend %desk--one-half; // 50% at desktop
+    
+}

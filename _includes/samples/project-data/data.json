@@ -1,0 +1,22 @@
+{
+	"project_settings": {
+		"name": "Front-End Guide",
+		"support_legacy_ie": false
+	},
+
+	// Add new navigation items here
+	"navigation": [
+		{
+			"title": "Home",
+			"url": "/"
+		},
+		{
+			"title": "A navigation item",
+			"url": "/the-url-to-the-page"
+		},
+		{
+			"title": "Another navigation item",
+			"url": "/the-other-url-to-the-page"
+		}
+	]
+}

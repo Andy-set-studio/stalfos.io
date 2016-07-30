@@ -1,0 +1,25 @@
+/*------------------------------------*\
+    THEME MODE
+
+	For all decor related styles
+\*------------------------------------*/
+
+
+/*------------------------------------*\
+    IMPORT FRAMEWORK
+\*------------------------------------*/
+@import "../framework/build";
+
+/*------------------------------------*\
+    DECLARATIONS
+\*------------------------------------*/
+$output-mode: "theme";
+
+/*------------------------------------*\
+    IMPORTS
+\*------------------------------------*/
+@import "imports/mixins";
+@import "imports/helpers"; 
+@import "imports/components";
+@import "imports/layouts";
+@import "imports/third-party";

@@ -1,0 +1,12 @@
+.your-element {
+    display: flex;
+
+    // If html has class no-flexbox, fall back to table layout
+    @include feauture-fail("no-flexbox") {
+        display: table;
+
+        > * {
+        	display: table-cell;
+        }
+    }
+}

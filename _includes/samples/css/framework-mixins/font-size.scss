@@ -1,0 +1,10 @@
+.your-element {
+
+	// Allow the mixin to generate a line height based on the base ratio
+	@include font-size(16px, true);
+
+	// Override the line height with a tighter ratio
+	&--tight-line-height {
+		@include font-size(16px, true, false, 1.2);
+	}
+}

@@ -1,0 +1,13 @@
+.your-element {
+	display: block;
+
+	@include no-js() {
+		display: none;
+	}
+
+	// If you want to target this element with the no-js class
+	@include no-js(true) {
+
+		// This would generate .your-element.no-js
+	}
+}

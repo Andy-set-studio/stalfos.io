@@ -1,0 +1,7 @@
+.your-element {
+	background: red;
+
+	@include hover() {
+		background: yellow;
+	}
+}

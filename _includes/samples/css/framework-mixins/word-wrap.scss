@@ -1,0 +1,7 @@
+.your-element {
+
+	&[href*="mailto"] {
+		
+		@include word-wrap();
+	}
+}

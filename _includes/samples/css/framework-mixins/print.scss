@@ -1,0 +1,7 @@
+.your-element {
+	display: block;
+
+	@include print() {
+		display: none;
+	}
+}

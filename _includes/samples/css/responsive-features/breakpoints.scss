@@ -1,0 +1,20 @@
+// Up to large phones
+$breakpoint--palm: "(max-width: 683px)";
+
+// Large phones & small tablets
+$breakpoint--portable: "(max-width: 999px)";
+
+// Large phones & small tablets upwards
+$breakpoint--portable-and-up: "(min-width: 400px)";
+
+// Large tablets & small desktops
+$breakpoint--lap: "(min-width: 684px) and (max-width: 999px)";
+
+// Large tablets & small desktops upwards
+$breakpoint--lap-and-up: "(min-width: 684px)";
+
+// Desktop browsers
+$breakpoint--desk: "(min-width: 1000px)";
+
+// Large desktop browsers
+$breakpoint--desk--wide: "(min-width: 1300px)";

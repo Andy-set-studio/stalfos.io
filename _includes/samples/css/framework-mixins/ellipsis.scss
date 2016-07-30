@@ -1,0 +1,6 @@
+.your-element {
+	white-space: no-wrap;
+	position: relative;
+
+	@include ellipsis();
+}

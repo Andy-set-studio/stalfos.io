@@ -1,0 +1,18 @@
+.example-component {
+
+    // Standard styles pulled in by global.scss
+    // Will output in global.css
+    @include mode("global") {
+
+        display: block;
+        width: 100px;
+        height: 100px;
+
+    }
+
+    // Theme styles pulled in by theme.scss
+    // Will output in theme.css
+    @include mode("theme") {
+        background: red;
+    }
+}
