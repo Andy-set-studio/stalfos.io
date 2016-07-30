@@ -26,3 +26,6 @@ asset_version: 0.1.0
 # Build settings
 markdown: kramdown
 #theme: minima
+
+# Ignore directories
+exclude: ['front-end']

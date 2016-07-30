@@ -1,0 +1,8 @@
+.icon {
+
+	@include mode("global") {
+		display: inline-block;
+		position: relative;
+	}
+	
+}
