@@ -1,0 +1,38 @@
+.primary-nav {
+
+	@include mode("global") {
+
+		display: block;
+		width: 100%;
+		white-space: nowrap;
+		overflow-x: auto;
+		-webkit-overflow-scrolling: touch;
+
+		@include media-query("lap-and-up") {
+			text-align: right;
+		}
+
+		&__item {
+			@extend %capitalize;
+
+			color: $slate--mid;
+			text-decoration: none;
+
+			@include hover() {
+				color: $turqoise;
+			}
+
+			&.is-active {
+				color: $turqoise;
+				font-weight: bold;
+				text-decoration: underline;
+			}
+
+			// Add space to siblings
+			& + & {
+				margin-left: $gutter--mini;
+			}
+		}
+	}
+
+}

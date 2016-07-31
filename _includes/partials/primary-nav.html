@@ -1,0 +1,22 @@
+{% if site.pages %}
+
+	<nav role="menu" class="primary-nav">
+		<a href="/" class="primary-nav__item" role="menuitem"{% if page.url == '/' %} aria-label="current page"{% endif %}>Home</a>
+
+		{% for item in site.pages %}
+
+			{% if item.title %}
+				<a href="{{ item.permalink }}" class="primary-nav__item{% if item.permalink == page.permalink %} is-active{% endif %}" role="menuitem"{% if item.permalink == page.permalink %} aria-label="current page"{% endif %}>{{ item.title }}</a>
+			{% endif %}
+
+		{% endfor %}
+
+		<a href="/" rel="external" href="{{ site.github_url }}" class="primary-nav__item">
+			<span class="is-hidden--text">Visit this project's </span>
+			GitHub
+			<span class="is-hidden--text"> profile</span>
+		</a>
+
+	</nav>
+
+{% endif %}

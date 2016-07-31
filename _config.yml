@@ -17,15 +17,12 @@ title: Stalfos
 email: me@andy-bell.co.uk
 description: > # this means to ignore newlines until "baseurl:"
   Stalfos is an open-source, skeletal front-end development starter kit. It provides a solid starting-point and framework for working with HTML, CSS and JavaScript
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://stalfos.io" # the base hostname & protocol for your site
-twitter_username: hankchizljaw
-github_username: hankchizljaw
 asset_version: 0.1.0
+svg_path: /images/icons/svg-symbols.svg
+github_url: https://github.com/hankchizljaw/stalfos
 
 # Build settings
 markdown: kramdown
-#theme: minima
 
 # Ignore directories
 exclude: ['front-end']

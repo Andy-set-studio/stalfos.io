@@ -18,6 +18,8 @@ body {
 	font-family: $base-font-family;
 	min-width: $site-min-width;
 	min-height: 100%;
+    background: $eggshell;
+    color: $slate--mid;
 
 	@include font-size($base-font-size, true);
 }
@@ -29,6 +31,10 @@ img {
 
 a[href^="mailto"] {
 	@include word-wrap();
+}
+
+a:not([class]) {
+    color: $turqoise;
 }
 
 .wrapper {

@@ -1,10 +1,67 @@
 .site-head {
-	
+	border-bottom: 1px solid $grey;
+	background: $white;
+
 	@include mode("global") {
+
+		padding: $gutter 0;
+		margin: 0 0 $gutter--double 0;
 
 		&__heading {
 			@extend %is-hidden--text;
 		}
+
+		&__inner {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+			flex-wrap: nowrap;
+
+			@include media-query("lap-and-up") {
+				flex-direction: row;
+				align-items: center;
+			}
+		}
+
+		&__brand,
+		&__nav {
+			display: flex;
+
+			@include media-query("lap-and-up") {
+				flex: auto;
+			}
+		}
+
+		&__brand {
+			align-items: center;
+			text-decoration: none;
+			
+			&__icon {
+				width: 40px;
+				height: 40px;
+			}
+
+			&__text {
+				width: calc(100% - 40px);
+				padding-left: $gutter--mini;
+				color: $slate--mid;
+
+				@include font-size(20px, true, false, $tight-line-height-ratio);
+
+				> * {
+					color: $slate;
+				}
+			}
+
+		}
+
+		&__nav {
+
+			@include media-query("palm") {
+				padding-top: $gutter--mini;
+			}
+		}
+
 	}
 	
 }

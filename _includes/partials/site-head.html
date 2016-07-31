@@ -1,24 +1,21 @@
 <header class="site-head" role="banner">
+	<div class="site-head__inner wrapper">
+		
+		{% if page.hidden_title %}
+			<h1 class="site-head__heading">{{ page.hidden_title }}</h1>
+		{% endif %}
 
-	{% if page.hidden_title %}
+		<a class="site-head__brand" href="/" {% if page.url == '/' %} aria-label="current page"{% endif %}>
+			<span class="site-head__brand__icon" aria-hidden="true">
+				{% include /partials/logo.html %}
+			</span>
+			<div class="site-head__brand__text">
+				Stalfos <small><abbr title="version">v</abbr>1.0.0</small>
+			</div>
+		</a>
+		<div class="site-head__nav">
+			{% include /partials/primary-nav.html %}
+		</div>
 
-		<h1 class="site-head__heading">{{ page.hidden_title }}</h1>
-
-	{% endif %}
-
-	{% if site.pages %}
-
-		<nav role="menu">
-			<a href="/" role="menuitem">Home</a>
-
-			{% for item in site.pages %}
-
-				<a href="{{ item.permalink }}" class="{% if item.permalink == page.permalink %}is-active{% endif %}" role="menuitem">{{ item.title }}</a>
-
-			{% endfor %}
-
-		</nav>
-
-	{% endif %}
-
+	</div>
 </header>
