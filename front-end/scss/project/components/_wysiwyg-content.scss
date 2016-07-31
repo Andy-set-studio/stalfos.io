@@ -1,0 +1,74 @@
+.wysiwyg-content {
+
+	@include mode("global") {
+
+		margin: 0 auto;
+		color: $slate--mid;
+		line-height: $body-copy-line-height-ratio;
+
+		// Create some breathing room for scrolly parent
+		&:after {
+			content: "";
+			display: block;
+			width: 100%;
+			height: $gutter--double;
+		}
+
+		*:not(li):not([class]) + *:not(li):not([class]) {
+			margin-top: $content-flow-space;
+		}
+
+		// Heading content flow
+		*:not(h1):not(h2) + h1 {
+			padding-top: $gutter--double;
+		}
+
+		*:not(h1):not(h2) + h2 {
+			padding-top: $gutter;
+		}
+
+		h1:not([class]) {
+			display: block;
+			border-bottom: 1px solid $grey;
+			padding-bottom: 5px;
+			margin-bottom: $gutter;
+		}
+
+		h1:not([class]) + h2:not([class]) {
+			padding-top: $gutter;
+		}
+
+		h3:not([class]) {
+			color: $turqoise--mid;
+		}
+
+		p {			
+			white-space: pre-line;
+
+			img {
+				margin: 20px 0; 
+			}
+		}
+
+		strong, b {
+			font-weight: 700;
+		}
+
+		ul, ol {
+			margin-left: $gutter--double;
+		}
+
+		ul {
+			list-style: disc;
+		}
+
+		ol {
+			list-style: decimal;
+		}
+
+		li + li {
+			margin-top: $gutter--mini;
+		}
+
+	}
+}

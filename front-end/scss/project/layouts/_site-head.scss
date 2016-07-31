@@ -7,10 +7,6 @@
 		padding: $gutter 0;
 		margin: 0 0 $gutter--double 0;
 
-		&__heading {
-			@extend %is-hidden--text;
-		}
-
 		&__inner {
 			display: flex;
 			flex-direction: column;
@@ -35,7 +31,7 @@
 		&__brand {
 			align-items: center;
 			text-decoration: none;
-			
+
 			&__icon {
 				width: 40px;
 				height: 40px;

@@ -2,7 +2,7 @@
 	<div class="site-head__inner wrapper">
 		
 		{% if page.hidden_title %}
-			<h1 class="site-head__heading">{{ page.hidden_title }}</h1>
+			<h1 class="is-hidden--text">{{ page.hidden_title }}</h1>
 		{% endif %}
 
 		<a class="site-head__brand" href="/" {% if page.url == '/' %} aria-label="current page"{% endif %}>
@@ -16,6 +16,6 @@
 		<div class="site-head__nav">
 			{% include /partials/primary-nav.html %}
 		</div>
-
+		<a class="is-hidden--text" href="#content">Click here to skip to the main content</a>
 	</div>
 </header>

@@ -3,6 +3,7 @@
 	@include mode("global") {
 
 		@mixin size-render($size) {
+			
 		    /**
 		     * Whole
 		     */
@@ -132,7 +133,7 @@
 		    }
 
 		    #{$size}eight-tenths {
-		        // Use four-fifths
+		        width: 80%;
 		    }
 
 		    #{$size}nine-tenths {
