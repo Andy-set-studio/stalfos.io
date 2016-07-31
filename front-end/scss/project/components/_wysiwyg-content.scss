@@ -42,7 +42,7 @@
 			color: $turqoise--mid;
 		}
 
-		p {			
+		p {         
 			white-space: pre-line;
 
 			img {
@@ -68,6 +68,33 @@
 
 		li + li {
 			margin-top: $gutter--mini;
+		}
+
+		code {
+			background: $white;
+			padding: 2px 4px;
+			border: 1px solid $grey;
+			color: $turqoise--mid;
+			border-radius: $radius;
+			position: relative;
+			top: -1px;
+		}
+
+		pre {
+
+			code {
+				display: inline-block;
+				padding: $gutter $gutter--double;
+				width: 100%;
+				overflow-x: scroll;
+				color: $slate--mid;
+				tab-size: 4;
+			}
+		}
+
+		p code,
+		li code {
+			white-space: nowrap;
 		}
 
 	}
