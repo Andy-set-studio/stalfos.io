@@ -2,6 +2,7 @@
 layout: documentation-post
 title: CSS
 permalink: /css/
+hidden_title: Stalfos CSS documentation 
 ---
 
 Stalfos provides you with a really simple and lightweight CSS framework that you can use to help you out. It's based on the BEM methodology, but isn't overly opinionated. It provides you with useful little tools such as a silent grid system, useful mixins and a project structure aimed at helping you to write component based CSS.
