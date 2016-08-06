@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: documentation-post
 title: CSS
 permalink: /css/
 ---
@@ -304,3 +304,7 @@ The CSS framework has several preset variables to help make your project as conf
 - `generic`: Empty by default again, but a section to put generic values 
 - `metrics`: Where all size related variables live. A lot of what powers the [universal sizing system](#css-universal-sizing-system) an the [grid](#css-grid) live here
 - `typography`: Where all your typography based rules live
+
+* TOC
+{:toc}
+{: .is-hidden--text.js-page__table-of-contents-source }
