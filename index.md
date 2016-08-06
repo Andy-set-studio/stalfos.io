@@ -1,10 +1,17 @@
 ---
-layout: default
-title: Getting Started
-permalink: /getting-started/
+layout: documentation-post
+hidden_title: Stalfos home page 
 ---
 
-It is recommended that you use Stalfos as a base and not as a framework. Therefore the most straightforward way to get it running would be to:
+## About Stalfos
+
+Stalfos is an open-source, skeletal front-end development starter kit. It provides a solid starting-point and framework for working with HTML, CSS and JavaScript. It also provides tools for working with images, fonts and SVG.
+
+Along with being a useful starter kit, Stalfos is completely modifiable and extendable which allows you to use it to create a powerful front-end development workflow. This is mainly because the core of Stalfos is [Gulp](http://gulpjs.com/) which provides a modular task based processing system.
+
+## Getting Started
+
+It's' recommended that you use Stalfos as a starting point and not as a framework. The most straightforward way to get it running is to:
 
 1.  Go to the [Stalfos Github repository](https://github.com/hankchizljaw/stalfos) 
 2.  Download the latest version as a ZIP
@@ -30,7 +37,7 @@ This data can be as small or large as you like. By default you have the followin
 
 ## Usage Example
 
-If you wanted to build a navigation element in your `site-head.html` partial you could do something like this.
+If you wanted to build a navigation element in your `site-head.html` partial, you could do something like this.
 
 #### data.json
 
@@ -75,3 +82,7 @@ The gulp file is split into 3 main sections which are:
 1. `MODULES`: The required NPM modules the makeup the engine of the gulp file. Every declaration here is referenced in `package.json` which is what NPM uses to provide you with the correct modules
 2. `GLOBAL VARS`: These global vars / constants allow you to configure the gulp file with confidence that your changes will be made safely 
 3. `TASKS`: The collection of tasks that do all the hard work for you. The smaller tasks can also be run in your terminal, but are mainly there to work in unison with the other tasks to power either `gulp-serve` or `gulp-watch`
+
+* TOC
+{:toc}
+{: .is-hidden--text.js-page__table-of-contents-source }
