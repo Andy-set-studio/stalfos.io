@@ -24,5 +24,8 @@ github_url: https://github.com/hankchizljaw/stalfos
 # Build settings
 markdown: kramdown
 
+kramdown:
+  toc_levels: 1..3
+
 # Ignore directories
 exclude: ['front-end']

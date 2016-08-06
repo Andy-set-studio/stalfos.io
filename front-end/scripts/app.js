@@ -39,10 +39,8 @@ var app = (function($) {
 						// Run switch to bind each module to each key
 						switch(module) {
 							
-							// This is an example. Delete when you add your own cases.
-							case 'example1':
-								
-								// Run code here 
+							case 'page':
+								elem.page();
 								break;
 							
 						}
@@ -51,9 +49,7 @@ var app = (function($) {
 				}
 			});
 		}
-		
-		// Delete this line. This is just for letting you know that everything is fine on first load.
-		console.log('All is hunky dory');
+
 	};
 	
 	return {

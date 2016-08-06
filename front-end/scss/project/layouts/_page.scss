@@ -8,6 +8,7 @@
 		&__sidebar {
 			background: $white;
 			border-top: 1px solid $grey;
+			padding: $gutter;
 			
 			@include media-query("lap-and-up") {
 				border-top: none;
@@ -15,7 +16,8 @@
 			}
 		}
 
-		&__content {
+		&__content,
+		&__sidebar {
 			
 			@include media-query("lap-and-up") {
 
