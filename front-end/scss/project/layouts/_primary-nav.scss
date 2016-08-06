@@ -15,17 +15,16 @@
 		&__item {
 			@extend %capitalize;
 
-			color: $slate--mid;
+			color: $white;
 			text-decoration: none;
 
 			@include hover() {
-				color: $turqoise;
+				color: $turqoise--light;
 			}
 
 			&.is-active {
-				color: $turqoise;
+				color: $turqoise--light;
 				font-weight: bold;
-				text-decoration: underline;
 			}
 
 			// Add space to siblings

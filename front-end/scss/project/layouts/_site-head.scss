@@ -1,6 +1,6 @@
 .site-head {
 	border-bottom: 1px solid $grey;
-	background: $white;
+	background: $turqoise;
 
 	@include mode("global") {
 
@@ -39,12 +39,12 @@
 			&__text {
 				width: calc(100% - 40px);
 				padding-left: $gutter--mini;
-				color: $slate--mid;
+				color: $white;
 
 				@include font-size(20px, true, false, $tight-line-height-ratio);
 
 				> * {
-					color: $slate;
+					color: $turqoise--light;
 				}
 			}
 
