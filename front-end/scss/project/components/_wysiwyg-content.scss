@@ -20,7 +20,7 @@
 		}
 
 		// Heading content flow
-		*:not(h2) + h2 {
+		*:not(h2):not([class]) + h2 {
 			padding-top: $gutter;
 		}
 

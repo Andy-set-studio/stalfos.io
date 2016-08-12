@@ -5,14 +5,14 @@ permalink: /css/
 hidden_title: Stalfos CSS documentation 
 ---
 
-Stalfos provides you with a really simple and lightweight CSS framework that you can use to help you out. It's based on the BEM methodology, but isn't overly opinionated. It provides you with useful little tools such as a silent grid system, useful mixins and a project structure aimed at helping you to write component based CSS.
+Stalfos provides you with a really simple and lightweight CSS framework that you can use to help you out. It's based on the BEM methodology, but isn't overly opinionated. It provides you with useful little tools such as a grid system, useful mixins and a project structure aimed at helping you to write component based CSS.
 
 ## Project Structure
 
 Let's have a look at the project structure first. The folders within the `scss` directory are: 
 
 - `framework`: This houses the framework level SCSS
-  - `core`: Core modules such as the grid, resets and display components live here
+  - `core`: Core modules such as resets and display components live here
   - `file-templates`: Where any templates live for certain elements of the framework
   - `helpers`: Where small, silent helpers live
   - `mixins`: Any framework level mixins such as `font-size` and `media-query` live here
@@ -44,7 +44,7 @@ These breakpoints are completely configurable for your project, but have been si
 
 ## Universal Sizing System
 
-Stalfos provides a human readable universal sizing system to simplify sizing your elements responsively. Matching your breakpoints, the framework generates silent classes that can be `@extended` within your components and layouts. 
+Stalfos provides a human readable universal sizing system to simplify sizing your elements responsively. Matching your breakpoints, the framework generates classes that can be used within your markup.
 
 You will have the following sizes available across all breakpoints:
 
@@ -63,26 +63,24 @@ You will have the following sizes available across all breakpoints:
 This example shows how you can quickly set 3 different sizes at 3 breakpoints in just 3 lines of code.
 
 ```css
-{% include samples/css/universal-sizing-system/example-responsive.scss %}
+{% include samples/css/universal-sizing-system/responsive.html %}
 ```
 
-This example shows how you can size without breakpoints too. This is a recommended approach if something was the same size across all breakpoints because it keeps both your SCSS and output CSS nice and light.
+This example shows how you can size without breakpoints too. This is a useful approach if something was the same size across all breakpoints.
 
 ```css
-{% include samples/css/universal-sizing-system/example-no-breakpoints.scss %}
+{% include samples/css/universal-sizing-system/standard.html %}
 ```
 
 ## Grid System
 
-Stalfos provides a grid system that is built using silent classes to help you sew it deep into your components and layouts. 
+Stalfos provides a grid system with [flexbox](https://en.wikipedia.org/wiki/CSS_Flex_Box_Layout) that falls back to `inline-block.` The grid aims to help you predictably layout your elements with a solid and flexible system that has maximum browser support.
 
-Build with [flexbox](https://en.wikipedia.org/wiki/CSS_Flex_Box_Layout) that falls back to `inline-block` - the grid aims to help you predictably layout your elements with a solid and flexible system that has maximum browser support.
-
-The grid also provides and works with a [universal sizing system](#css-universal-sizing-system) that can be used with or without the grid. It's recommended that you familiarise yourself with that before progressing to the examples.
+The grid is built to work hand-in-hand with the [universal sizing system](#css-universal-sizing-system). It's recommended that you familiarise yourself with that before progressing to the examples.
 
 ### Usage Example
 
-Let's create a grid that has 3 items. At `palm` they'll will be 100% wide and at `lap` and `desk` they will be split over thirds.
+Let's create a grid that has 3 items. At `palm` they'll will be 100% wide and at `lap-and-up` they will be split over thirds.
 
 #### HTML
 
@@ -90,13 +88,7 @@ Let's create a grid that has 3 items. At `palm` they'll will be 100% wide and at
 {% include samples/css/grid/standard-example/html.html %}
 ```
 
-#### CSS
-
-```css
-{% include samples/css/grid/standard-example/css.scss %}
-```
-
-You'll notice that `%grid` only needs to be applied to the parent. The direct children are presumed grid items and the system acts on that accordingly.
+You'll notice that `.grid` only needs to be applied to the parent. The direct children are presumed grid items and the system acts on that accordingly.
 
 Now let's add a modifier that makes the grid align centrally so that if an item drops off, it sits in the middle.
 
@@ -106,25 +98,19 @@ Now let's add a modifier that makes the grid align centrally so that if an item 
 {% include samples/css/grid/modifier-example/html.html %}
 ```
 
-#### CSS
-
-```css
-{% include samples/css/grid/modifier-example/css.scss %}
-```
-
 ### Available Modifiers
 
-- `%grid--rev`: Reverse the horizontal order of your grid items
-- `%grid—narrow`: Halve the guttering size 
-- `%grid--wide`: Double the guttering size
-- `%grid—full`: Remove guttering to have flush items
-- `%grid--right`: Right align the grid items
-- `%grid--center`: Center align the grid items
-- `%grid--middle`: Vertically center align grid items
-- `%grid--bottom`: Vertically align grid items to the bottom
-- `%grid--top`: Vertically align grid items to the top 
-- `%grid--level-heights`: Extend `%grid__inner` with the inner element of your grid items and flexbox will level their heights
-- `%grid--split`: Add space between your elements
+- `.grid--rev`: Reverse the horizontal order of your grid items
+- `.grid—narrow`: Halve the guttering size 
+- `.grid--wide`: Double the guttering size
+- `.grid—full`: Remove guttering to have flush items
+- `.grid--right`: Right align the grid items
+- `.grid--center`: Center align the grid items
+- `.grid--middle`: Vertically center align grid items
+- `.grid--bottom`: Vertically align grid items to the bottom
+- `.grid--top`: Vertically align grid items to the top 
+- `.grid--level-heights`: Add an inner layer to your grid item that will level with it's siblings
+- `.grid--split`: Add space between your elements
 
 ## Framework Mixins
 
