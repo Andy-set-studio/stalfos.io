@@ -57,7 +57,7 @@
 		}
 
 		code {
-			background: $white;
+			background: $grey--eggshell;
 			padding: 2px 4px;
 			border: 1px solid $grey;
 			color: $turqoise--mid;
@@ -73,7 +73,8 @@
 				padding: $gutter $gutter--double;
 				width: 100%;
 				overflow-x: scroll;
-				color: $slate--mid;
+				color: $grey--eggshell;
+				background: $slate--mid;
 				tab-size: 4;
 			}
 		}

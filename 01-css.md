@@ -62,13 +62,13 @@ You will have the following sizes available across all breakpoints:
 
 This example shows how you can quickly set 3 different sizes at 3 breakpoints in just 3 lines of code.
 
-```css
+```html
 {% include samples/css/universal-sizing-system/responsive.html %}
 ```
 
 This example shows how you can size without breakpoints too. This is a useful approach if something was the same size across all breakpoints.
 
-```css
+```html
 {% include samples/css/universal-sizing-system/standard.html %}
 ```
 
