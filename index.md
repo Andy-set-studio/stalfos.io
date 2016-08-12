@@ -1,9 +1,8 @@
 ---
 layout: documentation-post
 hidden_title: Stalfos home page 
+title: About Stalfos
 ---
-
-## About Stalfos
 
 Stalfos is an open-source, skeletal front-end development starter kit. It provides a solid starting-point and framework for working with HTML, CSS and JavaScript. It also provides tools for working with images, fonts and SVG.
 
