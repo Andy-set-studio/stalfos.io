@@ -287,10 +287,11 @@ A template for this file can be found in `scss/framework/file-templates/_mode-te
 
 The CSS framework has several preset variables to help make your project as configurable as possible. They are split into 4 sections in the `scss/project/vars` directory. They are as follows:
 
-- `color`: Empty by default, but a section to keep all your colour variables together
-- `generic`: Empty by default again, but a section to put generic values 
-- `metrics`: Where all size related variables live. A lot of what powers the [universal sizing system](#css-universal-sizing-system) an the [grid](#css-grid) live here
-- `typography`: Where all your typography based rules live
+1. `color`: Empty by default, but a section to keep all your colour variables together
+2. `generic`: Empty by default again, but a section to put generic values 
+3. `metrics`: Where all size related variables live. A lot of what powers the [universal sizing system](#css-universal-sizing-system) an the [grid](#css-grid) live here
+4. `typography`: Where all your typography based rules live
+
 
 * TOC
 {:toc}
