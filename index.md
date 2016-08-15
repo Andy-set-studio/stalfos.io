@@ -54,7 +54,7 @@ If you wanted to build a navigation element in your `site-head.html` partial, yo
 
 ## Default
 
-The default command will trigger [serve](#gulp-commands-serve). Trigger `default` by running `gulp` in your terminal.
+The default command will trigger [serve](#serve). Trigger `default` by running `gulp` in your terminal.
 
 ## Serve
 
@@ -66,7 +66,7 @@ Trigger serve by running `gulp-serve` in your terminal.
 
 ## Watch 
 
-The watch task (formerly called 'website') compiles your assets in the same manner as [serve](#gulp-commands-serve), but sends them over to your project directory, which is defined in `gulpfile.js` by modifying the `WEBSITE_PATH` variable. There are also CSS, script and image paths that are prefixed with `WEBSITE_` which can be modified too*. 
+The watch task (formerly called 'website') compiles your assets in the same manner as [serve](#serve), but sends them over to your project directory, which is defined in `gulpfile.js` by modifying the `WEBSITE_PATH` variable. There are also CSS, script and image paths that are prefixed with `WEBSITE_` which can be modified too*. 
 
 The task will automatically update these website assets whenever you update one of your `front-end` files. At the moment, it won't refresh your browser though.
 
