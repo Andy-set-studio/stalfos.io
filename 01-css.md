@@ -27,12 +27,12 @@ Let's have a look at the project structure first. The folders within the `scss` 
   - `vars`: All of your project variables should live here. They're organised into separate files to keep things manageable 
   - `_shame.scss`: Where temporary hacks live. The idea here is if you have to write some nasty CSS, stick it in here so you and your team can easily see what needs refactoring
   - `_z-index.scss`: A central place for all of your z-index values. This can help you keep an eye on what sits where which will hopefully prevent `z-index: 9999`
-  - `global.scss`: The main CSS file and [mode](#css-mode-system) of your project. Everything is pulled into this file, which then generates `global.css` in your project.
-  - `legacy.scss`: This is for IE <= IE9. This file generates everything from the "legacy" [mode](#css-mode-system). Do please note that it has to be enabled by setting `project_settings.support_legacy_ie` to `true` in your [project data](#project-data)
+  - `global.scss`: The main CSS file and [mode](#mode-system) of your project. Everything is pulled into this file, which then generates `global.css` in your project.
+  - `legacy.scss`: This is for IE <= IE9. This file generates everything from the "legacy" [mode](#mode-system). Do please note that it has to be enabled by setting `project_settings.support_legacy_ie` to `true` in your [project data](#/project-data)
 
 ## Responsive Features
 
-Stalfos provides some useful tools to help you build out mobile-first, responsive websites. The main tools that help are the breakpoints and [media query mixin](#css-framework-mixins-media-query). 
+Stalfos provides some useful tools to help you build out mobile-first, responsive websites. The main tools that help are the breakpoints and [media query mixin](#media-query). 
 
 Off the shelf, the available breakpoints are as follows:
 
@@ -76,7 +76,7 @@ This example shows how you can size without breakpoints too. This is a useful ap
 
 Stalfos provides a grid system with [flexbox](https://en.wikipedia.org/wiki/CSS_Flex_Box_Layout) that falls back to `inline-block.` The grid aims to help you predictably layout your elements with a solid and flexible system that has maximum browser support.
 
-The grid is built to work hand-in-hand with the [universal sizing system](#css-universal-sizing-system). It's recommended that you familiarise yourself with that before progressing to the examples.
+The grid is built to work hand-in-hand with the [universal sizing system](#universal-sizing-system). It's recommended that you familiarise yourself with that before progressing to the examples.
 
 ### Usage Example
 
@@ -181,7 +181,7 @@ Hover provides you with a shorthand way of targeting the `:hover`, `:focus` and 
 
 ### Media Query
 
-This mixin provides a wrapper to work with the core of [Stalfos' responsive features](#css-responsive-features). Using the defined breakpoints, the media query mixin allows you to work with media queries in a predictable and scaleable fashion.
+This mixin provides a wrapper to work with the core of [Stalfos' responsive features](#responsive-features). Using the defined breakpoints, the media query mixin allows you to work with media queries in a predictable and scaleable fashion.
 
 #### Usage Example
 
@@ -191,7 +191,7 @@ This mixin provides a wrapper to work with the core of [Stalfos' responsive feat
 
 #### Available Breakpoints
 
-As defined above in [Stalfos' responsive features](#css-responsive-features), the available breakpoints in the media query mixin directly correlate with the breakpoints defined by you in your project. The breakpoints are as follows: 
+As defined above in [Stalfos' responsive features](#responsive-features), the available breakpoints in the media query mixin directly correlate with the breakpoints defined by you in your project. The breakpoints are as follows: 
 
 ```
 {% include samples/css/framework-mixins/media-query-breakpoints.txt %}
@@ -199,7 +199,7 @@ As defined above in [Stalfos' responsive features](#css-responsive-features), th
 
 ### Mode
 
-As explained in the [mode system](#css-mode-system) section, this media query allows you to fence your CSS into separate output modes.
+As explained in the [mode system](#mode-system) section, this media query allows you to fence your CSS into separate output modes.
 
 #### Usage Example
 
@@ -239,7 +239,7 @@ A very simple wrapper to saving you writing a media query for print. Do be aware
 
 ### Selection
 
-This media query works similarly to the [placeholder](#css-framework-mixins-placeholder) mixin. It allows you to have a little more control when styling your selection based styles.
+This media query works similarly to the [placeholder](#placeholder) mixin. It allows you to have a little more control when styling your selection based styles.
 
 The two parameters `$background`(1) and `$color`(2) are available for you to set.
 
@@ -289,7 +289,7 @@ The CSS framework has several preset variables to help make your project as conf
 
 1. `color`: Empty by default, but a section to keep all your colour variables together
 2. `generic`: Empty by default again, but a section to put generic values 
-3. `metrics`: Where all size related variables live. A lot of what powers the [universal sizing system](#css-universal-sizing-system) an the [grid](#css-grid) live here
+3. `metrics`: Where all size related variables live. A lot of what powers the [universal sizing system](#universal-sizing-system) an the [grid](#grid) live here
 4. `typography`: Where all your typography based rules live
 
 
