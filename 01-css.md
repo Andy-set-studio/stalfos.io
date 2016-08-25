@@ -44,9 +44,9 @@ These breakpoints are completely configurable for your project, but have been si
 
 ## Universal Sizing System
 
-Stalfos provides a human readable universal sizing system to simplify sizing your elements responsively. Matching your breakpoints, the framework generates classes that can be used within your markup.
+Stalfos provides a human readable universal sizing system to simplify sizing your elements responsively. Matching your breakpoints, the framework generates classes that can be used within your markup. The available breakpoints can be configured in `vars/_metrics.scss`.
 
-You will have the following sizes available across all breakpoints:
+You will have the following sizes available across all configured breakpoints:
 
 - Whole
 - Halves
@@ -71,6 +71,8 @@ This example shows how you can size without breakpoints too. This is a useful ap
 ```html
 {% include samples/css/universal-sizing-system/standard.html %}
 ```
+
+As you can see the breakpoint based classes behavave like BEM elements. This is because they are technically elements of a breakpoint. It also helps make the code a little bit more readable.
 
 ## Grid System
 
