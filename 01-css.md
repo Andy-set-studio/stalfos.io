@@ -103,9 +103,9 @@ Now let's add a modifier that makes the grid align centrally so that if an item 
 ### Available Modifiers
 
 - `.grid--rev`: Reverse the horizontal order of your grid items
-- `.grid—narrow`: Halve the guttering size 
+- `.grid--narrow`: Halve the guttering size 
 - `.grid--wide`: Double the guttering size
-- `.grid—full`: Remove guttering to have flush items
+- `.grid--full`: Remove guttering to have flush items
 - `.grid--right`: Right align the grid items
 - `.grid--center`: Center align the grid items
 - `.grid--middle`: Vertically center align grid items
