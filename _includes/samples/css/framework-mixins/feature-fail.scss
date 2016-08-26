@@ -2,7 +2,8 @@
     display: flex;
 
     // If html has class no-flexbox, fall back to table layout
-    @include feauture-fail("no-flexbox") {
+    @include feauture-fail("flexbox") {
+    	
         display: table;
 
         > * {
