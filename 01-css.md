@@ -115,7 +115,7 @@ Now let's add a modifier that makes the grid align centrally so that if an item 
 
 ### Bounce Scroll
 
-This mixin allows you to create a vertical-overflow scroll element that will have the "bounce" with iOS devices etc. 
+This mixin allows you to create a vertical or horizontal overflow scroll element that will "bounce" on iOS devices etc. Set the `$direction` parameter to either `"vertical"` or `"horizontal"` accordingly. By default the direction is `vertical`.
 
 #### Usage Example
 
