@@ -36,7 +36,7 @@ Stalfos provides some useful tools to help you build out mobile-first, responsiv
 
 Off the shelf, the available breakpoints are as follows:
 
-```css
+```scss
 {% include samples/css/responsive-features/breakpoints.scss %}
 ```
 
@@ -119,7 +119,7 @@ This mixin allows you to create a vertical or horizontal overflow scroll element
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/bounce-scroll.scss %}
 ```
 
@@ -129,7 +129,7 @@ This mixin truncates single lines of text for you. It's especially useful for em
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/ellipsis.scss %}
 ```
 
@@ -141,7 +141,7 @@ The feature fail mixin allows you to query the classes that Modernizr adds to yo
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/feature-fail.scss %}
 ```
 
@@ -155,7 +155,7 @@ The parameters (with their default values) are:
 
 #### Usage Example
 
-```
+```scss
 $size: // pixel value required
 $calculate-line-height: false // a flag to generate a REM line-height or not
 $important: false // should this be set as !important
@@ -164,7 +164,7 @@ $line-height-ratio: $base-line-height-ratio // the ratio to calculate the line-h
 
 An example of the mixin in use:
 
-```css
+```scss
 {% include samples/css/framework-mixins/font-size.scss %}
 ```
 
@@ -174,7 +174,7 @@ Hover provides you with a shorthand way of targeting the `:hover`, `:focus` and 
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/hover.scss %}
 ```
 
@@ -184,7 +184,7 @@ This mixin provides a wrapper to work with the core of [Stalfos' responsive feat
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/media-query.scss %}
 ```
 
@@ -202,7 +202,7 @@ As explained in the [mode system](#mode-system) section, this media query allows
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/mode.scss %}
 ```
 
@@ -212,7 +212,7 @@ In it's typical usage the no js mixin is for adding styles in response to no Jav
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/no-js.scss %}
 ```
 
@@ -222,7 +222,7 @@ Placeholder is a one-line way of colouring the text of a form input's `placehold
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/placeholder.scss %}
 ```
 
@@ -232,7 +232,7 @@ A very simple wrapper to saving you writing a media query for print. Do be aware
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/print.scss %}
 ```
 
@@ -244,7 +244,7 @@ The two parameters `$background`(1) and `$color`(2) are available for you to set
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/selection.scss %}
 ```
 
@@ -256,7 +256,7 @@ Properties such as `content` and speak are `covered` with this mixin.
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/sudo-decor.scss %}
 ```
 
@@ -266,7 +266,7 @@ This provides you with core styles that allow difficult to break areas of text t
 
 #### Usage Example
 
-```css
+```scss
 {% include samples/css/framework-mixins/word-wrap.scss %}
 ```
 
@@ -284,13 +284,13 @@ This quick example creates a new **theme** mode which allows for decor related C
 
 A template for this file can be found in `scss/framework/file-templates/_mode-template.scss`. It's recommended that you put and extra modes alongside global.scss. Effectively a mode can be put wherever you like though as the `gulp-sass` task will look for `.scss` files throughout the `scss` directory.
 
-```css
+```scss
 {% include samples/css/mode/theme.scss %}
 ```
 
 #### example-component
 
-```css
+```scss
 {% include samples/css/mode/example-component.scss %}
 ```
 

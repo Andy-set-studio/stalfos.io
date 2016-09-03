@@ -1,0 +1,133 @@
+.highlight {
+
+	@include mode("global") {
+
+		// Target everything in a code child element. 
+		// This will prevent leakages for inline <code> tags with the highlight class.
+		code {
+
+			// CSS related
+			.language-scss & {
+
+				.c1,
+				.cm {
+					color: $syntax-green;
+				}
+
+				.s1,
+				.s2 {
+					color: $syntax-olive;
+				}
+
+				.nv,
+				.nc,
+				.p + .o + .o,
+				.k,
+				.k + .nt,
+				.nc + .p + .k,
+				.k + .nd {
+					color: $syntax-red; 
+				}
+
+				.k {
+					color: $syntax-purple;
+				}
+
+				.nd,
+				.nd + p {
+					color: $syntax-blue;
+				}
+
+				.nl {
+					color: $syntax-yellow;
+				}
+
+				.n,
+				.nb,
+				.p + .m,
+				.bp,
+				.o + .m,
+				.m + .mi,
+				.no {
+					color: $syntax-orange;
+				}
+
+				// Override back to base colour
+				.s1 + .o {
+					color: $eggshell;
+				}
+			}
+
+			// HTML Related 
+			.language-html & {
+
+				.nt,
+				.na {
+					color: $syntax-red;
+				}
+
+				.s {
+					color: $syntax-olive;
+				}
+
+				.c {
+					color: $syntax-green;
+				}
+			}
+
+			// JSON
+			.language-json & {
+
+				.nt,
+				.s2 {
+					color: $syntax-olive;
+				}
+
+				.err {
+					color: $syntax-green;
+				}
+
+				.kc {
+					color: $syntax-orange;
+				}
+			}
+
+			// JS
+			.language-javascript & {
+
+				.nx,
+				.p + .na {
+					color: $syntax-red;
+				}
+
+				.nx + .p,
+				.kd + .p,
+				.k + .p {
+					color: $syntax-blue;
+				}
+
+				.kd,
+				.k,
+				.nb {
+					color: $syntax-purple;
+				}
+
+				.s1,
+				.s2 {
+					color: $syntax-olive;
+				}
+
+				.c1,
+				.cm {
+					color: $syntax-green;
+				}
+
+				.kc,
+				.mi {
+					color: $syntax-orange;
+				}
+			}
+
+		}
+	}
+}

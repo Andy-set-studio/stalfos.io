@@ -26,7 +26,7 @@ The app delegate is designed to look for elements on your page with a `data-modu
 ```
 
 #### example-module.js
-```js
+```javascript
 {% include samples/scripts/app-delegate/example-module.js %}
 ```
 

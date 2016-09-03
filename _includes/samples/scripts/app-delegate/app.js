@@ -1,4 +1,3 @@
-
 // Loop each module key
 $.each(modules, function(i, module) {
 	
@@ -6,7 +5,7 @@ $.each(modules, function(i, module) {
 	switch(module) {
 		
 		// Add your ID in the modules switch statement
-		case 'example-madule':
+		case 'example-module':
 			
 			elem.exampleModule();
 			break;

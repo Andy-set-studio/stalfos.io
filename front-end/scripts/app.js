@@ -50,6 +50,18 @@ var app = (function($) {
 			});
 		}
 
+		// Nasty little fix to format some of the markdown nasties
+		$('pre > code').each(function() {
+
+			var codeElem = $(this),
+				content = codeElem.html();
+
+			// Replace entities with real characters
+			content = content.replace(/&amp;lbrace;/g, '{').replace(/&amp;rbrace;/g, '}');
+
+			codeElem.html(content);
+		});
+
 	};
 	
 	return {

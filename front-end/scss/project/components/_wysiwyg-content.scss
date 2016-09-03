@@ -72,10 +72,15 @@
 				display: inline-block;
 				padding: $gutter $gutter--double;
 				width: 100%;
-				overflow-x: scroll;
-				color: $grey--eggshell;
-				background: $slate--mid;
 				tab-size: 4;
+				color: $eggshell;
+				background: $charcoal;
+
+				@include bounce-scroll("horizontal");
+
+				@include media-query("desk") {
+					@include font-size(18px, true, false, $body-copy-line-height-ratio);
+				}
 			}
 		}
 
