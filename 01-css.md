@@ -250,7 +250,7 @@ The two parameters `$background`(1) and `$color`(2) are available for you to set
 
 ### Sudo Decor
 
-This mixin will generate basic CSS to help you style out decorative sudo elements such as `:before` and `:after`. 
+This mixin will dump basic CSS to help you style out decorative sudo elements such as `:before` and `:after`. 
 
 Properties such as `content` and speak are `covered` with this mixin.
 

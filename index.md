@@ -8,9 +8,15 @@ Stalfos is an open-source, skeletal front-end development starter kit. It provid
 
 Along with being a useful starter kit, Stalfos is completely modifiable and extendable which allows you to use it to create a powerful front-end development workflow. This is mainly because the core of Stalfos is [Gulp](http://gulpjs.com/) which provides a modular task based processing system.
 
+Out of the box, Stalfos gives you:
+
+- A SCSS based collection of helpers and a modular orientated project structure
+- A JS / jQuery based project structure with some little helpers included 
+- A [Nunjucks](https://mozilla.github.io/nunjucks/) based HTML template building system 
+
 ## Getting Started
 
-It's' recommended that you use Stalfos as a starting point and not as a framework. The most straightforward way to get it running is to:
+It's recommended that you use Stalfos as a starting point and not as a framework. The most straightforward way to get it running is to:
 
 1.  Go to the [Stalfos Github repository](https://github.com/hankchizljaw/stalfos) 
 2.  Download the latest version as a ZIP
