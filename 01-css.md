@@ -238,7 +238,7 @@ A very simple wrapper to saving you writing a media query for print. Do be aware
 
 ### Selection
 
-This media query works similarly to the [placeholder](#placeholder) mixin. It allows you to have a little more control when styling your selection based styles.
+This mixin works similarly to the [placeholder](#placeholder) mixin. It allows you to have a little more control when styling your selection based styles.
 
 The two parameters `$background`(1) and `$color`(2) are available for you to set.
 
@@ -246,6 +246,18 @@ The two parameters `$background`(1) and `$color`(2) are available for you to set
 
 ```css
 {% include samples/css/framework-mixins/selection.scss %}
+```
+
+### Sudo Decor
+
+This mixin will generate basic CSS to help you style out decorative sudo elements such as `:before` and `:after`. 
+
+Properties such as `content` and speak are `covered` with this mixin.
+
+#### Usage Example
+
+```css
+{% include samples/css/framework-mixins/sudo-decor.scss %}
 ```
 
 ### Word Wrap
