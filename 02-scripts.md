@@ -11,7 +11,7 @@ With an [app delegate](#app-delegate) sitting in the middle of your modules - wr
 
 ## App Delegate
 
-The app delegate is designed to look for elements on your page with a `data-module` attribute. In this attribute you should add an identifier for which module(s) you wish to bind this element. The app delegate with then run a switch on the module(s) and bind to modules accordingly.
+The app delegate is designed to look for elements on your page with a `data-module` attribute. In this attribute you should add an identifier for which module(s) you wish to bind this element. The app delegate will then run a switch on the ID(s) and bind your element to modules accordingly.
 
 ### Module Binding Example
 
@@ -28,6 +28,22 @@ The app delegate is designed to look for elements on your page with a `data-modu
 #### example-module.js
 ```js
 {% include samples/scripts/app-delegate/example-module.js %}
+```
+
+## Typset 
+
+By default, there's a module called `typeSet` in your project's `module` directory. This silent module will automatically go through your text and add `&nbsp;` where appropriate to help prevent orphans and widows.
+
+This can be prevented by adding the `js-typeset__ignore` class to your element. This will affect all child elements too.
+
+You can globally prevent it by setting `settings.typeset.enabled = false` in `app.js`.
+
+### Example 
+
+Here's an example of typeSet being prevented on a `nav` element.
+
+```html
+{% include samples/scripts/modules/type-set.html %}
 ```
 
 ## Helpers
@@ -117,7 +133,7 @@ This helper is aimed at generating a change event for your form elements. Some o
 
 ### Debounce
 
-"Borrowed" from [David Walsh's blog](http://davidwalsh.name/javascript-debounce-function). This function helps debounce events such as `resize` which can fire a crazy amount of times.
+"Borrowed" from [David Walsh's blog](http://davidwalsh.name/javascript-debounce-function), this function helps debounce events such as `resize` which can fire a crazy amount of times.
 
 ```javascript
 {% include samples/scripts/helpers/debounce.js %}
