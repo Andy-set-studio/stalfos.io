@@ -42,6 +42,10 @@ var app = (function($) {
 							case 'page':
 								elem.page();
 								break;
+
+							case 'hamburger':
+								elem.hamburger();
+								break;
 							
 						}
 						

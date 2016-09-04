@@ -14,7 +14,7 @@ $radius--midi: ($radius  + ($radius / 2));
 $radius--double: ($radius * 2);
 $radius--treble: ($radius * 3);
 $content-flow-space: 15px;
-$site-head-height: 81px;
+$site-head-height: 61px;
 
 /*------------------------------------*\
     BREAKPOINTS
@@ -22,10 +22,10 @@ $site-head-height: 81px;
 $breakpoint--palm: "(max-width: 683px)";
 $breakpoint--portable: "(max-width: 999px)";
 $breakpoint--portable-and-up: "(min-width: 400px)";
-$breakpoint--lap: "(min-width: 684px) and (max-width: 999px)";
+$breakpoint--lap: "(min-width: 684px) and (max-width: 1299px)";
 $breakpoint--lap-and-up: "(min-width: 684px)";
-$breakpoint--desk: "(min-width: 1000px)";
-$breakpoint--desk--wide: "(min-width: 1300px)";
+$breakpoint--desk: "(min-width: 1300px)";
+$breakpoint--desk--wide: "(min-width: 1600px)";
 
 /*------------------------------------*\
     SIZE SETTINGS

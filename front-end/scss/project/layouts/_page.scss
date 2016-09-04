@@ -2,28 +2,55 @@
 
 	@include mode("global") {
 
-		overflow: hidden;
-		position: relative;
-
 		&__sidebar {
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			bottom: 0;
 			background: $white;
-			border-top: 1px solid $grey;
-			padding: $gutter;
-			
+			padding: 100px $gutter $gutter $gutter;
+			transform: translate3d(100%, 0, 0);
+
+			&:target {
+				animation: menu-enter 200ms forwards;
+			}
+
 			@include media-query("lap-and-up") {
-				border-top: none;
+				width: 300px;
+				top: $site-head-height;
+				padding: $gutter--midi $gutter $gutter $gutter;
 				border-right: 1px solid $grey;
+				transform: translate3d(0, 0, 0);
+			}
+
+			&__inner {
+				width: 100%;
+				height: 100%;
+				
+				@include bounce-scroll();
+
+				@include media-query("lap-and-up") {
+					height: calc(100% - #{ $gutter--treble });
+				}
 			}
 		}
 
-		&__content,
-		&__sidebar {
-			
+		&__content {
+			position: relative;
+			overflow: hidden;
+
 			@include media-query("lap-and-up") {
+				margin-left: 300px;
+			}
 
-				max-height: calc(100vh - #{ $site-head-height });
+			@include media-query("desk") { 
+				margin-right: 300px;
+			}
 
-				@include bounce-scroll();
+			@include media-query("desk-wide") { 
+				margin-right: 600px;
 			}
 		}
 	}

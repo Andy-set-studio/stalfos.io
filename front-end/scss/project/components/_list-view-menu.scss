@@ -2,8 +2,7 @@
 
 	@include mode("global") {
 
-		// Add negative margin because the first item has no border
-		margin-top: -$gutter--mini;
+		border-top: 1px solid $grey;
 
 		&__list {
 			padding: 0 0 0 $gutter;

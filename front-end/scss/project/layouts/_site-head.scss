@@ -1,10 +1,17 @@
 .site-head {
-	border-bottom: 1px solid $grey;
-	background: $turqoise;
 
 	@include mode("global") {
 
-		padding: $gutter 0;
+		border-bottom: 1px solid $grey;
+		background: $turqoise;
+		padding: $gutter--mini 0;
+
+		@include media-query("lap-and-up") {
+			position: fixed;
+			top: 0;
+			right: 0;
+			left: 0;
+		}
 
 		&__inner {
 			display: flex;

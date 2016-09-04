@@ -1,0 +1,67 @@
+.hamburger {
+
+	@include mode("global") {
+
+		display: block;
+		width: 30px;
+		height: 30px;
+		position: absolute;
+		top: 50%;
+		right: $gutter;
+		margin: -15px 0 0 -15px;
+
+		@include media-query("lap-and-up") {
+			display: none;
+		}
+
+		&__bar {
+
+			top: 50%;
+			margin: -2px 0 0 0;
+
+			.is-active & {
+				background: transparent;
+			}
+
+			// Style the bar and the sudo elems the same
+			&,
+			&:before,
+			&:after {
+				@extend %transition;
+
+				display: block;
+				width: 100%;
+				height: 4px;
+				background: $white;
+				position: absolute;
+			}
+
+			// Sudo only
+			&:before,
+			&:after {
+				@include sudo-decor();
+
+				.is-active & {
+					top: 0;
+					background: $turqoise;
+				}
+			}
+
+			&:before {
+				top: -9px;
+
+				.is-active & {
+					transform: rotate(45deg);
+				}
+			}
+
+			&:after {
+				top: 9px;
+
+				.is-active & {
+					transform: rotate(-45deg);
+				}
+			}
+		}
+	}
+}

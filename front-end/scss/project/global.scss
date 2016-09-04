@@ -22,6 +22,11 @@ body {
     color: $slate--mid;
 
 	@include font-size($base-font-size, true);
+
+    // Account for fixed header 
+    @include media-query("lap-and-up") {
+        padding-top: $site-head-height;
+    }
 }
 
 img {
@@ -97,6 +102,7 @@ $output-mode: "global";
 \*------------------------------------*/
 @import "imports/mixins";
 @import "imports/helpers";
+@import "imports/animations";
 @import "imports/components";
 @import "imports/layouts";
 @import "imports/third-party";

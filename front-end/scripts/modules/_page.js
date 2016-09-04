@@ -31,6 +31,9 @@
 
 				// Load the html
 				sourceHtml = tableOfContentsSource.html();
+
+				// Remove the source
+				//tableOfContentsSource.remove();
 			}
 
 

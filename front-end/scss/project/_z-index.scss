@@ -1,0 +1,18 @@
+.site-head {
+	z-index: 10;
+}
+
+.hamburger {
+	z-index: 15;
+}
+
+.page {
+
+	&__sidebar {
+		z-index: 11;
+
+		@include media-query("lap-and-up") {
+			z-index: 1;
+		}
+	}
+}

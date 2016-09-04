@@ -3,17 +3,15 @@ layout: base
 test: Oh Hai
 ---
 
-<section class="[ page ] [ grid grid--rev grid--full ]" data-module="page">
-	<main class="size--palm--one-whole size--lap-and-up--three-quarters" id="content">
+<section class="page" data-module="page">
+	<main id="content">
 		<article class="[ page__content ] [ wysiwyg-content wysiwyg-content--padded ]">
 			<a class="is-hidden--text" href="#markdown-toc">Click for table of contents</a>
 			<h2>{{ page.title }}</h2>
 			{{ content }}
 		</article>
 	</main>
-	<aside class="[ page__sidebar ] [ size--palm--one-whole size--lap-and-up--one-quarter ]">
-		<div class="[ page-sidebar__inner ] [ js-page__table-of-contents-target ]" aria-hidden="true">
-			
-		</div>
+	<aside class="page__sidebar" id="table-of-contents-menu">
+		<div class="[ page__sidebar__inner ] [ js-page__table-of-contents-target ]"></div>
 	</aside>
 </section>
