@@ -15,6 +15,10 @@
 
 			&:target {
 				animation: menu-enter 200ms forwards;
+
+				@include media-query("lap-and-up") {
+					animation: none;
+				}
 			}
 
 			@include media-query("lap-and-up") {
