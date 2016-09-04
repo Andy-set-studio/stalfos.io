@@ -22,6 +22,7 @@ body {
     color: $slate--mid;
 
 	@include font-size($base-font-size, true);
+    @include selection($slate--mid, $white);
 
     // Account for fixed header 
     @include media-query("lap-and-up") {
