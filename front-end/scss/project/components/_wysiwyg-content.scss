@@ -7,14 +7,6 @@
 		color: $slate--mid;
 		line-height: $body-copy-line-height-ratio;
 
-		// Create some breathing room for scrolly parent
-		&:after {
-			content: "";
-			display: block;
-			width: 100%;
-			height: $gutter--double;
-		}
-
 		*:not(li):not([class]) + *:not(li):not([class]) {
 			margin-top: $content-flow-space;
 		}

@@ -2,6 +2,15 @@
 	
 	@include mode("global") {
 
+		padding: $gutter;
+
+		&__heart {
+			color: darken($syntax-red, 10%);
+		}
+
+		@include media-query("lap-and-up") {
+			margin-left: 300px;
+		}
 	}
 	
 }
