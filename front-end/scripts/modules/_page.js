@@ -13,6 +13,19 @@
 		var init = function() {
 
 			loadTableOfContents();
+
+			// On hashchange
+			$(window).on('hashchange', function() {
+
+				// Load the target
+				var currentTarget = $(':target');
+
+				// If it's a content heading, scroll to it's position minus some padding
+				if(currentTarget.parents(elem).any()) {
+
+					$(window).scrollTop((currentTarget.offset().top - 80));
+				}
+			});
 		},
 
 		// Attempt to load the hidden table of contents and clone it to a visible menu
@@ -33,7 +46,7 @@
 				sourceHtml = tableOfContentsSource.html();
 
 				// Remove the source
-				//tableOfContentsSource.remove();
+				tableOfContentsSource.remove();
 			}
 
 
