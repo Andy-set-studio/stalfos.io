@@ -4,7 +4,7 @@
 		{% if page.hidden_title %}
 			<h1 class="is-hidden--text">{{ page.hidden_title }}</h1>
 		{% endif %}
-		<a class="is-hidden--text" href="#content">Click here to skip to the main content</a>
+		<a class="is-hidden--text" href="#main-content">Jump to the main content</a>
 
 		<a class="site-head__brand" href="/" {% if page.url == '/' %} aria-label="current page"{% endif %}>
 			<span class="site-head__brand__icon" aria-hidden="true">
@@ -18,7 +18,7 @@
 			{% include /partials/primary-nav.html %}
 		</div>
 		<a class="hamburger" href="#markdown-toc" data-menu-id="table-of-contents-menu" data-module="hamburger">
-			<span class="is-hidden--text">Skip to the table of contents</span>
+			<span class="is-hidden--text">Jump to the table of contents</span>
 			<span class="hamburger__bar" aria-hidden="true" role="presentation"></span>
 		</a>
 	</div>
