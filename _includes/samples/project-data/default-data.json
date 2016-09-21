@@ -1,6 +1,6 @@
 {
 	"project_settings": {
 		"name": "Stalfos", // Rename to your project name
-		"support_legacy_ie": false // A flag to determine wether or not you want legacy IE support
+		"support_legacy_ie": false // A flag to determine whether or not you want legacy IE support
 	}
 }
