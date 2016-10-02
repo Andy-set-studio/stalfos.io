@@ -300,7 +300,7 @@ The CSS framework has several preset variables to help make your project as conf
 
 1. `color`: Empty by default, but a section to keep all your colour variables together
 2. `generic`: Empty by default again, but a section to put generic values 
-3. `metrics`: Where all size related variables live. A lot of what powers the [universal sizing system](#universal-sizing-system) an the [grid](#grid) live here
+3. `metrics`: Where all size related variables live. A lot of what powers the [universal sizing system](#universal-sizing-system) and the [grid system](#grid-system) live here
 4. `typography`: Where all your typography based rules live
 
 
