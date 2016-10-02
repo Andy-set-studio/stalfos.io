@@ -3,6 +3,6 @@
 	&:after {
 
 		// Add the base CSS this mixin generates
-		@include sudo-decor();
+		@include pseudo-decor();
 	}
 }

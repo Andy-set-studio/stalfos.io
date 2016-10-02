@@ -248,16 +248,16 @@ The two parameters `$background`(1) and `$color`(2) are available for you to set
 {% include samples/css/framework-mixins/selection.scss %}
 ```
 
-### Sudo Decor
+### Pseudo Decor
 
-This mixin will dump basic CSS to help you style out decorative sudo elements such as `:before` and `:after`. 
+This mixin will dump basic CSS to help you style out decorative pseudo selectors such as `:before` and `:after`. 
 
-Properties such as `content` and speak are `covered` with this mixin.
+Properties such as `content` and `speak` are covered with this mixin.
 
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/sudo-decor.scss %}
+{% include samples/css/framework-mixins/pseudo-decor.scss %}
 ```
 
 ### Word Wrap
