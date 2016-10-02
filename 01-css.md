@@ -236,18 +236,6 @@ A very simple wrapper to saving you writing a media query for print. Do be aware
 {% include samples/css/framework-mixins/print.scss %}
 ```
 
-### Selection
-
-This mixin works similarly to the [placeholder](#placeholder) mixin. It allows you to have a little more control when styling your selection based styles.
-
-The two parameters `$background`(1) and `$color`(2) are available for you to set.
-
-#### Usage Example
-
-```scss
-{% include samples/css/framework-mixins/selection.scss %}
-```
-
 ### Pseudo Decor
 
 This mixin will dump basic CSS to help you style out decorative pseudo selectors such as `:before` and `:after`. 
@@ -258,6 +246,18 @@ Properties such as `content` and `speak` are covered with this mixin.
 
 ```scss
 {% include samples/css/framework-mixins/pseudo-decor.scss %}
+```
+
+### Selection
+
+This mixin works similarly to the [placeholder](#placeholder) mixin. It allows you to have a little more control when styling your selection based styles.
+
+The two parameters `$background`(1) and `$color`(2) are available for you to set.
+
+#### Usage Example
+
+```scss
+{% include samples/css/framework-mixins/selection.scss %}
 ```
 
 ### Word Wrap
