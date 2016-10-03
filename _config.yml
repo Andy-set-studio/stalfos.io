@@ -17,7 +17,7 @@ title: Stalfos
 email: me@andy-bell.co.uk
 description: > # this means to ignore newlines until "baseurl:"
   Stalfos is an open-source, skeletal front-end development starter kit. It provides a solid starting-point and framework for working with HTML, CSS and JavaScript
-stalfos_version: 1.0.0
+stalfos_version: 1.0.1
 asset_version: 1.2.2
 svg_path: /images/icons/svg-symbols.svg
 github_url: https://github.com/hankchizljaw/stalfos
