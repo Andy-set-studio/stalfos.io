@@ -68,7 +68,7 @@ This task compiles all dynamic assets into a static website, then serves it up o
 
 Serve is the typical command you'd use while building static HTML, CSS and JS templates or if you were building a static website. 
 
-Trigger serve by running `gulp-serve` in your terminal.
+Trigger serve by running `gulp serve` in your terminal.
 
 ### Watch 
 
@@ -77,6 +77,8 @@ The watch task (formerly called 'website') compiles your assets in the same mann
 The task will automatically update these website assets whenever you update one of your `front-end` files. At the moment, it won't refresh your browser though.
 
 Watch is the typical command you'd use while implementing your front-end to a server driven project. 
+
+Trigger watch by running `gulp watch` in your terminal.
 
 *<small>more info can be learned about this in the [gulp structure section below](#gulp-file-structure).</small>
 
