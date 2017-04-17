@@ -3,7 +3,7 @@
 	@include mode("global") {
 
 		border-bottom: 1px solid $grey;
-		background: $turqoise;
+		background: $blue;
 		padding: $gutter--mini 0;
 
 		@include media-query("lap-and-up") {
@@ -51,7 +51,7 @@
 				@include font-size(20px, true, false, $tight-line-height-ratio);
 
 				> * {
-					color: $turqoise--light;
+					color: $blue--light;
 				}
 			}
 

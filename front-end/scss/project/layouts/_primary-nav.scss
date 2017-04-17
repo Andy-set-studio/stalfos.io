@@ -19,11 +19,11 @@
 			text-decoration: none;
 
 			@include hover() {
-				color: $turqoise--light;
+				color: $blue--light;
 			}
 
 			&.is-active {
-				color: $turqoise--light;
+				color: $blue--light;
 				font-weight: bold;
 			}
 
