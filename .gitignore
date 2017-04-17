@@ -1,5 +1,9 @@
-_site
+.DS_Store
 .sass-cache
 .jekyll-metadata
+*.scssc
+*.log
+*.lock
+_site
 node_modules
-front-end/.public
+.public
