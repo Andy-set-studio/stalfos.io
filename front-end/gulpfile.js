@@ -1,31 +1,30 @@
 /*------------------------------------*\
-    MODULES
+	MODULES
 \*------------------------------------*/
 
-var gulp = require('gulp'),
-	wrap = require('gulp-wrap'),
-	watch = require('gulp-watch'),
+var autoprefixer = require('gulp-autoprefixer'),
+	cleanCSS = require('gulp-clean-css'),
+	concat = require('gulp-concat'),
+	connect = require('gulp-connect'),
+	data = require('gulp-data'),
+	del = require('del'),
+	fs = require('fs'),
+	gulp = require('gulp'),
+	merge = require('merge-stream'),
+	nunjucksRender = require('gulp-nunjucks-render'),
+	plumber = require('gulp-plumber'),
+	prettify = require('gulp-prettify')
+	runSequence = require('run-sequence').use(gulp),
+	sass = require('gulp-sass'),
+	sourcemaps = require('gulp-sourcemaps'),
 	svgmin = require('gulp-svgmin'),
 	svgSymbols = require('gulp-svg-symbols'),
-	nunjucksRender = require('gulp-nunjucks-render'),
-	del = require('del'),
-	sass = require('gulp-sass'),
-	connect = require('gulp-connect'),
-	plumber = require('gulp-plumber'),
-	concat = require('gulp-concat'),
 	uglify = require('gulp-uglify'),
-	sourcemaps = require('gulp-sourcemaps'),
-	minifyCss = require('gulp-minify-css'),
-	autoprefixer = require('gulp-autoprefixer'),
-	data = require('gulp-data'),
-	fs = require('fs'),
-	merge = require('merge-stream'),
-	runSequence = require('run-sequence').use(gulp),
-	prettify = require('gulp-prettify');
-
+	watch = require('gulp-watch'),
+	wrap = require('gulp-wrap');
 
 /*------------------------------------*\
-    GLOBAL VARS
+	GLOBAL CONSTS
 \*------------------------------------*/
 
 var SVG_PATH = 'svg',
@@ -48,17 +47,14 @@ var SVG_PATH = 'svg',
 	WEBSITE_FONT_PATH = WEBSITE_PATH + '/fonts',
 	DATA_FILE = 'data.json';
 
-
-
 /*------------------------------------*\
-    TASKS
+	TASKS
 \*------------------------------------*/
 
 // Clean the web path out
-gulp.task('clean-web', function(cb) {
-	del([WEB_PATH], {force: true}, function() {
-		cb();
-	});
+gulp.task('clean-web', function() {
+	
+	return del([WEB_PATH], {force: true});
 });
 
 // Find all SVG and smash into a symbols file
@@ -66,14 +62,10 @@ gulp.task('process-svg', function() {
 
 	return gulp.src(SVG_PATH + '/*.svg')
 				.pipe(svgmin())
-			    .pipe(svgSymbols())
-			    .pipe(gulp.dest(SVG_SYMBOL_PATH));
-});
-
-// Clean up unese
-gulp.task('clean-svg-output-mess', function() {
-
-	del([SVG_SYMBOL_PATH + '/*.css'], {force: true}, function() {});
+				.pipe(svgSymbols({
+					templates: ['default-svg']
+				}))
+				.pipe(gulp.dest(SVG_SYMBOL_PATH));
 });
 
 // Process all the nunjucks templates
@@ -81,13 +73,13 @@ gulp.task('process-templates', function() {
 
 	var contents = fs.readFileSync(DATA_FILE);
 
-	nunjucksRender.nunjucks.configure([TEMPLATE_PATH + '/']);
-
 	return gulp.src(TEMPLATE_PATH + '/*.html')
 				.pipe(data(function(file) {
 					return JSON.parse(contents);
 				}))
-				.pipe(nunjucksRender())
+				.pipe(nunjucksRender({
+					path: TEMPLATE_PATH
+				}))
 				.pipe(prettify({indent_size: 4}))
 				.pipe(gulp.dest(WEB_PATH));
 });
@@ -103,7 +95,7 @@ gulp.task('process-sass', function () {
 					browsers: ['last 2 versions'],
 					cascade: false
 				}))
-				.pipe(minifyCss())
+				.pipe(cleanCSS())
 				.pipe(sourcemaps.write('.'))
 				.pipe(gulp.dest(WEB_PATH + '/css'));
 });
@@ -161,9 +153,9 @@ gulp.task('process-fonts', function() {
 gulp.task('webserver', function() {
 
 	connect.server({
-	    root: WEB_PATH,
-	    port: 8003,
-	    livereload: true
+		root: WEB_PATH,
+		port: 8003,
+		livereload: true
 	});
 
 });
@@ -205,10 +197,10 @@ gulp.task('website-assets', function() {
 gulp.task('serve', function() {
 
 	// Run build then set watch targets in the callback
-	runSequence('clean-web', 'process-svg', 'clean-svg-output-mess', 'process-templates', 'process-sass', 'process-scripts', 'process-images', 'process-fonts', function() {
+	runSequence('clean-web', 'process-svg', 'process-templates', 'process-sass', 'process-scripts', 'process-images', 'process-fonts', function() {
 
 		// Watch for changes with SVG
-		watch([SVG_PATH + '/*.svg'], function() { runSequence('process-svg', 'clean-svg-output-mess', function(){}) });
+		watch([SVG_PATH + '/*.svg'], function() { gulp.start('process-svg'); });
 
 		// Watch for changes with templates
 		watch([TEMPLATE_PATH + '/**/*.html'], function() { gulp.start('process-templates'); });
@@ -242,10 +234,10 @@ gulp.task('serve', function() {
 gulp.task('watch', function() {
 
 	// Run build then set watch targets in the callback
-	runSequence('clean-web', 'process-svg', 'clean-svg-output-mess', 'process-templates', 'process-sass', 'process-scripts', 'process-images', 'process-fonts', 'website-assets', function() {
+	runSequence('clean-web', 'process-svg', 'process-sass', 'process-scripts', 'process-images', 'process-fonts', 'website-assets', function() {
 
 		// Watch for changes with SVG
-		watch([SVG_PATH + '/*.svg'], function() { runSequence('process-svg', 'clean-svg-output-mess', function() { gulp.start('website-assets'); }); });
+		watch([SVG_PATH + '/*.svg'], function() { runSequence('process-svg', function() { gulp.start('website-assets'); }); });
 
 		// Watch for changes with sass
 		watch([SCSS_ROOT_PATH + '/**/*.scss'], function() { runSequence('process-sass', function() { gulp.start('website-assets'); }); });
