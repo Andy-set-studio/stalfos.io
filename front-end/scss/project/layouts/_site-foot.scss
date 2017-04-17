@@ -5,7 +5,7 @@
 		padding: $gutter;
 
 		&__heart {
-			color: darken($syntax-red, 10%);
+			color: darken($red, 10%);
 		}
 
 		@include media-query("lap-and-up") {

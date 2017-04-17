@@ -11,12 +11,12 @@
 
 				.c1,
 				.cm {
-					color: $syntax-green;
+					color: $grey;
 				}
 
 				.s1,
 				.s2 {
-					color: $syntax-olive;
+					color: $syntax-mint;
 				}
 
 				.nv,
@@ -25,21 +25,18 @@
 				.k,
 				.k + .nt,
 				.nc + .p + .k,
-				.k + .nd {
-					color: $syntax-red; 
+				.k + .nd,
+				.nl {
+					color: $syntax-pewter; 
 				}
 
 				.k {
-					color: $syntax-purple;
+					color: $grey--light;
 				}
 
 				.nd,
 				.nd + p {
 					color: $syntax-blue;
-				}
-
-				.nl {
-					color: $syntax-yellow;
 				}
 
 				.n,
@@ -49,7 +46,7 @@
 				.o + .m,
 				.m + .mi,
 				.no {
-					color: $syntax-orange;
+					color: $syntax-mint;
 				}
 
 				// Override back to base colour
@@ -63,15 +60,15 @@
 
 				.nt,
 				.na {
-					color: $syntax-red;
+					color: $syntax-pewter;
 				}
 
 				.s {
-					color: $syntax-olive;
+					color: $syntax-mint;
 				}
 
 				.c {
-					color: $syntax-green;
+					color: $eggshell;
 				}
 			}
 
@@ -79,16 +76,13 @@
 			.language-json & {
 
 				.nt,
-				.s2 {
-					color: $syntax-olive;
+				.s2,
+				.kc {
+					color: $syntax-mint;
 				}
 
 				.err {
-					color: $syntax-green;
-				}
-
-				.kc {
-					color: $syntax-orange;
+					color: $eggshell;
 				}
 			}
 
@@ -97,7 +91,7 @@
 
 				.nx,
 				.p + .na {
-					color: $syntax-red;
+					color: $syntax-pewter;
 				}
 
 				.nx + .p,
@@ -108,23 +102,17 @@
 
 				.kd,
 				.k,
-				.nb {
-					color: $syntax-purple;
-				}
-
+				.nb, 
 				.s1,
-				.s2 {
-					color: $syntax-olive;
+				.s2,
+				.kc,
+				.mi {
+					color: $syntax-mint;
 				}
 
 				.c1,
 				.cm {
-					color: $syntax-green;
-				}
-
-				.kc,
-				.mi {
-					color: $syntax-orange;
+					color: $grey--light;
 				}
 			}
 
