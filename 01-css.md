@@ -192,7 +192,7 @@ This mixin provides a wrapper to work with the core of [Stalfos' responsive feat
 
 As defined above in [Stalfos' responsive features](#responsive-features), the available breakpoints in the media query mixin directly correlate with the breakpoints defined by you in your project. The breakpoints are as follows: 
 
-```
+```scss
 {% include samples/css/framework-mixins/media-query-breakpoints.txt %}
 ```
 
