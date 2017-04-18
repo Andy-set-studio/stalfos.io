@@ -13,11 +13,13 @@
 			padding: 100px $gutter $gutter $gutter;
 			transform: translate3d(100%, 0, 0);
 
-			&:target {
+			&:target,
+			&.is-active {
 				animation: menu-enter 200ms forwards;
 
 				@include media-query("lap-and-up") {
 					animation: none;
+					transform: translate3d(0, 0, 0);
 				}
 			}
 

@@ -1,10 +1,6 @@
 @keyframes menu-enter {
 	from {
 		transform: translate3d(100%, 0, 0);
-
-		@include media-query("lap-and-up") {
-			transform: translate3d(0, 0, 0);
-		}
 	}
 
 	to {

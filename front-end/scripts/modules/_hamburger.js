@@ -11,10 +11,7 @@
 		var init = function() {
 
 			// Determine the target 
-			settings.target = (elem.attr(settings.targetAttr) ? '#' +  elem.attr(settings.targetAttr) : elem.attr('href'));
-
-			// Set the href attr to the target
-			elem.attr('href', settings.target);
+			settings.target = elem.attr('href');
 			
 			// Run the toggle method because the hash may already be set
 			toggle();
@@ -48,7 +45,7 @@
 		// Reset the hash and remove active state from trigger
 		reset = function() {
 			
-			location.hash = "main-content";
+			location.hash = "";
 			elem.removeClass(settings.activeClass);
 		};
 
