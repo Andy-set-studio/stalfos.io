@@ -1,6 +1,6 @@
 ---
 layout: documentation-post
-title: CSS
+title: CSS Framework
 permalink: /css-framework/
 redirect_from: /css/
 hidden_title: Stalfos CSS framework documentation 
