@@ -40,7 +40,7 @@ Stalfos provides some useful tools to help you build out mobile-first, responsiv
 Off the shelf, the available breakpoints are as follows:
 
 ```scss
-{% include samples/css/responsive-features/breakpoints.scss %}
+{% include samples/css-framework/responsive-features/breakpoints.scss %}
 ```
 
 These breakpoints are completely configurable for your project, but have been sized to be as generic as possible.
@@ -63,13 +63,13 @@ You will have the following sizes available across all configured breakpoints:
 This example shows how you can quickly set three different sizes at three breakpoints, in just three lines of code.
 
 ```html
-{% include samples/css/universal-sizing-system/responsive.html %}
+{% include samples/css-framework/universal-sizing-system/responsive.html %}
 ```
 
 This example shows how you can size without breakpoints too. This is a useful approach if something was the same size across all breakpoints.
 
 ```html
-{% include samples/css/universal-sizing-system/standard.html %}
+{% include samples/css-framework/universal-sizing-system/standard.html %}
 ```
 
 The breakpoint based classes behave like BEM elements. This is because they are technically elements of a breakpoint. It also helps make the markup more readable and understandable.
@@ -87,7 +87,7 @@ Let's create a grid that has 3 items. At `palm` they'll will be 100% wide and at
 #### HTML
 
 ```html
-{% include samples/css/grid/standard-example/html.html %}
+{% include samples/css-framework/grid/standard-example/html.html %}
 ```
 
 You'll notice that `.grid` only needs to be applied to the parent. The direct children are presumed grid items and the system acts on that accordingly.
@@ -97,7 +97,7 @@ Now let's add a modifier that makes the grid align centrally, so that if an item
 #### HTML
 
 ```html
-{% include samples/css/grid/modifier-example/html.html %}
+{% include samples/css-framework/grid/modifier-example/html.html %}
 ```
 
 ### Available Modifiers
@@ -123,7 +123,7 @@ This mixin allows you to create a vertical or horizontal overflow scroll element
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/bounce-scroll.scss %}
+{% include samples/css-framework/framework-mixins/bounce-scroll.scss %}
 ```
 
 ### Ellipsis 
@@ -133,7 +133,7 @@ This mixin truncates single lines of text for you. It's especially useful for em
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/ellipsis.scss %}
+{% include samples/css-framework/framework-mixins/ellipsis.scss %}
 ```
 
 ### Feature Fail 
@@ -145,7 +145,7 @@ The feature fail mixin allows you to query the classes that Modernizr adds to yo
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/feature-fail.scss %}
+{% include samples/css-framework/framework-mixins/feature-fail.scss %}
 ```
 
 ### Font Size
@@ -168,7 +168,7 @@ $line-height-ratio: $base-line-height-ratio // the ratio to calculate the line-h
 An example of the mixin in use:
 
 ```scss
-{% include samples/css/framework-mixins/font-size.scss %}
+{% include samples/css-framework/framework-mixins/font-size.scss %}
 ```
 
 ### Hover
@@ -178,7 +178,7 @@ Hover provides you with a shorthand way of targeting the `:hover`, `:focus` and 
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/hover.scss %}
+{% include samples/css-framework/framework-mixins/hover.scss %}
 ```
 
 ### Media Query
@@ -188,7 +188,7 @@ This mixin provides a wrapper to work with the core of [Stalfos' responsive feat
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/media-query.scss %}
+{% include samples/css-framework/framework-mixins/media-query.scss %}
 ```
 
 #### Available Breakpoints
@@ -196,7 +196,7 @@ This mixin provides a wrapper to work with the core of [Stalfos' responsive feat
 As defined above in [Stalfos' responsive features](#responsive-features), the available breakpoints in the media query mixin directly correlate with the breakpoints defined by you in your project variables. The breakpoints are as follows: 
 
 ```scss
-{% include samples/css/framework-mixins/media-query-breakpoints.txt %}
+{% include samples/css-framework/framework-mixins/media-query-breakpoints.txt %}
 ```
 
 ### Mode
@@ -206,7 +206,7 @@ As explained in the [mode system](#mode-system) section, this mixin allows you t
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/mode.scss %}
+{% include samples/css-framework/framework-mixins/mode.scss %}
 ```
 
 ### No JS
@@ -216,7 +216,7 @@ The typical usage of the `no-js` mixin is for defining styles for when there is 
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/no-js.scss %}
+{% include samples/css-framework/framework-mixins/no-js.scss %}
 ```
 
 ### Placeholder
@@ -226,7 +226,7 @@ Placeholder is a one-line way of colouring the text of a form input's `placehold
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/placeholder.scss %}
+{% include samples/css-framework/framework-mixins/placeholder.scss %}
 ```
 
 ### Print
@@ -238,7 +238,7 @@ Print is very simple wrapper to help save you from writing a media queries for p
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/print.scss %}
+{% include samples/css-framework/framework-mixins/print.scss %}
 ```
 
 ### Pseudo Decor
@@ -250,7 +250,7 @@ Properties such as `content` and `speak` are covered with this mixin.
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/pseudo-decor.scss %}
+{% include samples/css-framework/framework-mixins/pseudo-decor.scss %}
 ```
 
 ### Selection
@@ -262,7 +262,7 @@ The two parameters `$background`(1) and `$color`(2) are available for you to set
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/selection.scss %}
+{% include samples/css-framework/framework-mixins/selection.scss %}
 ```
 
 ### Word Wrap
@@ -272,7 +272,7 @@ This provides you with the core styles that allow difficult to break areas of te
 #### Usage Example
 
 ```scss
-{% include samples/css/framework-mixins/word-wrap.scss %}
+{% include samples/css-framework/framework-mixins/word-wrap.scss %}
 ```
 
 ## Mode System
@@ -290,13 +290,13 @@ This quick example creates a new **theme** mode which allows for decorative rela
 A template for this file can be found in `scss/framework/file-templates/_mode-template.scss`. It's recommended that you put any extra modes alongside global.scss. 
 
 ```scss
-{% include samples/css/mode/theme.scss %}
+{% include samples/css-framework/mode/theme.scss %}
 ```
 
 #### example-component
 
 ```scss
-{% include samples/css/mode/example-component.scss %}
+{% include samples/css-framework/mode/example-component.scss %}
 ```
 
 ## Variables
