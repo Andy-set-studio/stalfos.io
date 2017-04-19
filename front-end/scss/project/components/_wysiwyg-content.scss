@@ -50,8 +50,7 @@
 
 		code {
 			background: $grey--eggshell;
-			padding: 2px 4px;
-			border: 1px solid $grey;
+			padding: 2px;
 			color: $blue--mid;
 			border-radius: $radius;
 			position: relative;
@@ -75,11 +74,5 @@
 				}
 			}
 		}
-
-		p code,
-		li code {
-			white-space: nowrap;
-		}
-
 	}
 }
