@@ -2,8 +2,8 @@
 
 	$.fn.exampleModule = function() {
 
-		// THIS IS THE ELEMENT THAT YOUR BOUND THE MODULE TO
-		var elem = $(this), 
+		
+		var elem = $(this), // <- This is the element that you bound the module to
 			settings = {
 				activeClass: 'is-active'
 			};

@@ -41,7 +41,7 @@ You can globally prevent it by setting `settings.typeset.enabled = false` in `ap
 
 ### Example 
 
-Here's an example of typeSet being prevented on a `nav` element.
+Here's an example of `typeSet` being prevented on a `<nav />` element.
 
 ```html
 {% include samples/javascript/modules/type-set.html %}
@@ -49,7 +49,7 @@ Here's an example of typeSet being prevented on a `nav` element.
 
 ## Helpers
 
-In your `scripts` directory, you will see `_helpers.js`. This is a collection of little functions that should help you out.
+In your `scripts` directory, you will see `_helpers.js`. This is a collection of little functions that are designed to help you with common tasks.
 
 ### Any
 
@@ -84,7 +84,7 @@ AJAX Request is a wrapper for the [jQuery AJAX method](http://api.jquery.com/jqu
 
 ### AJAX HTML
 
-AJAX HTML is a wrapper for [AJAX Request](#ajax-request) that pre-overrides the `dataType` and `callback` for you to predictably call for HTML from an endpoint.
+AJAX HTML is a wrapper for [AJAX Request](#ajax-request) that pre-overrides the `dataType` and `callback` for you to predictably request HTML from an endpoint.
 
 ```javascript
 {% include samples/javascript/helpers/ajax-html.js %}
@@ -108,7 +108,7 @@ Query string helps you by either converting the browser's current query string t
 
 ### ESC
 
-ESC simply provides you with the ability to bind events to the escape key. It's useful little tool for making your interactive elements accessible. 
+ESC provides you with the ability to bind events to the escape key. It's a useful little tool for making your interactive elements more accessible. 
 
 ```javascript
 {% include samples/javascript/helpers/esc.js %}
@@ -118,15 +118,13 @@ ESC simply provides you with the ability to bind events to the escape key. It's 
 
 This little helper returns the current breakpoint which is set in your [CSS](/css/). The return value is the same as your SCSS variable name to keep things as simple as possible. 
 
-This should help you avoid user agent string querying, which we all know is nasty! 
-
 ```javascript
 {% include samples/javascript/helpers/get-breakpoint.js %}
 ```
 
 ### Change Event
 
-This helper is aimed at generating a change event for your form elements. Some of the input based elements require an `input` event instead of `change` and this helper sorts that for you.
+This helper is designed to help you bind a predictable change event to your form elements. Some of the input based elements require an `input` event instead of `change` and this helper sorts that for you.
 
 ```javascript
 {% include samples/javascript/helpers/change-event.js %}
@@ -134,7 +132,7 @@ This helper is aimed at generating a change event for your form elements. Some o
 
 ### Debounce
 
-"Borrowed" from [David Walsh's blog](http://davidwalsh.name/javascript-debounce-function), this function helps debounce events such as `resize` which can fire a crazy amount of times.
+"Borrowed" from [David Walsh's blog](http://davidwalsh.name/javascript-debounce-function), this function helps debounce events such as `resize` which can fire an unnecessary amount of times.
 
 ```javascript
 {% include samples/javascript/helpers/debounce.js %}

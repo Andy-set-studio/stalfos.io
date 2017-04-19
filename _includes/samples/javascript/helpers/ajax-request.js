@@ -11,7 +11,7 @@
 
 $.ajaxRequest({
 	url: '/test',
-	callback(function(data, isSuccess) {
+	callback: (function(data, isSuccess) {
 		
 		if(isSuccess) {
 			alert('All the data is WINNING');
