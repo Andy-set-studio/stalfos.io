@@ -1,8 +1,9 @@
 ---
 layout: documentation-post
 title: CSS
-permalink: /css/
-hidden_title: Stalfos CSS documentation 
+permalink: /css-framework/
+redirect_from: /css/
+hidden_title: Stalfos CSS framework documentation 
 ---
 
 Stalfos provides you with a really simple and lightweight CSS framework that you can use to help you build powerful, lightweight a front-end. 
