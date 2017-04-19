@@ -39,3 +39,7 @@ compress_html:
   endings: all
   profile: false
   startings: [head, body]
+
+# Additional Gems 
+gems:
+  - jekyll-redirect-from

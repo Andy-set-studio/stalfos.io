@@ -1,7 +1,8 @@
 ---
 layout: documentation-post
-title: Scripts
-permalink: /scripts/
+title: JavaScript
+permalink: /javascript/
+redirect_from: /scripts/
 hidden_title: Stalfos JavaScript documentation 
 ---
 
