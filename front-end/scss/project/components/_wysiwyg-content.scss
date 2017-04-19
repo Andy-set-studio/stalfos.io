@@ -60,8 +60,8 @@
 		pre {
 
 			code {
-				display: inline-block;
-				padding: $gutter $gutter--double;
+				display: block;
+				padding: $gutter--mini $gutter;
 				width: 100%;
 				tab-size: 4;
 				color: $eggshell;
