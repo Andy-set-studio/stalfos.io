@@ -43,6 +43,11 @@ a:not([class]) {
     color: $blue--mid;
 }
 
+abbr {
+    text-decoration: none;
+    border: none;
+}
+
 .wrapper {
 	min-width: $site-min-width;
 	margin: 0 auto;
