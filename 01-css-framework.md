@@ -57,6 +57,7 @@ You will have the following sizes available across all configured breakpoints:
 - Quarters
 - Sixths 
 - Tenths 
+- Twelfths
 
 ### Usage Example
 
