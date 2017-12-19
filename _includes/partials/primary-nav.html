@@ -6,7 +6,7 @@
 		{% for item in site.pages %}
 
 			{% if item.title and item.permalink %}
-				<a href="{{ item.permalink }}" class="primary-nav__item{% if item.permalink == page.permalink %} is-active{% endif %}" role="menuitem"{% if item.permalink == page.permalink %} aria-label="current page"{% endif %}>{{ item.title }}</a>
+				<a href="/stalfos.io{{ item.permalink }}" class="primary-nav__item{% if item.permalink == page.permalink %} is-active{% endif %}" role="menuitem"{% if item.permalink == page.permalink %} aria-label="current page"{% endif %}>{{ item.title }}</a>
 			{% endif %}
 
 		{% endfor %}
